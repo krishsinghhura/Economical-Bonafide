@@ -1,0 +1,307 @@
+import React, { useState, useEffect } from "react";
+import * as XLSX from "xlsx";
+
+const departments = ["BCA", "BSC", "MSC", "MCA", "EEE", "CSE"];
+
+const Validator = () => {
+  const [rows, setRows] = useState([]);
+  const [validRows, setValidRows] = useState([]);
+  const [invalidRows, setInvalidRows] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const [savedData, setSavedData] = useState(null);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedData, setSelectedData] = useState(null);
+
+  const validateRow = (row) => {
+    const errors = [];
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(row.EMAIL)) {
+      errors.push("Invalid Email");
+    }
+
+    if (!/^\d{12}$/.test(String(row["AADHAR NUMBER"]))) {
+      errors.push("AADHAR must be 12 digits");
+    }
+
+    if (!/^\d{12}$/.test(String(row["REGISTRATION NUMBER"]))) {
+      errors.push("Reg No. must be 12 digits");
+    }
+
+    if (!departments.includes(row.DEPARTMENT)) {
+      errors.push("Invalid Department");
+    }
+
+    const cgpa = parseFloat(row.CGPA);
+    if (isNaN(cgpa) || cgpa < 0 || cgpa > 10) {
+      errors.push("CGPA must be between 0 and 10");
+    }
+
+    return errors;
+  };
+
+  const handleFileUpload = (e) => {
+    const file = e.target.files[0];
+    const reader = new FileReader();
+
+    reader.onload = (evt) => {
+      const data = evt.target.result;
+      const workbook = XLSX.read(data, { type: "binary" });
+      const worksheet = workbook.Sheets[workbook.SheetNames[0]];
+      const json = XLSX.utils.sheet_to_json(worksheet);
+
+      setRows(json);
+      setLoading(true);
+      setValidRows([]);
+      setInvalidRows([]);
+
+      const tempValid = [];
+      const tempInvalid = [];
+      let count = 0;
+
+      const interval = setInterval(() => {
+        if (count < json.length) {
+          const row = json[count];
+          const errors = validateRow(row);
+
+          if (errors.length === 0) {
+            tempValid.push(row);
+          } else {
+            tempInvalid.push({ ...row, errors });
+          }
+
+          count++;
+          setProgress(Math.floor((count / json.length) * 100));
+        } else {
+          clearInterval(interval);
+          setValidRows(tempValid);
+          setInvalidRows(tempInvalid);
+          setLoading(false);
+        }
+      }, 2000 / json.length); // Total 2 seconds
+    };
+
+    reader.readAsBinaryString(file);
+  };
+
+  const handleInputChange = (type, index, field, value) => {
+    const updated = type === "valid" ? [...validRows] : [...invalidRows];
+    updated[index][field] = value;
+    if (type === "valid") setValidRows(updated);
+    else setInvalidRows(updated);
+  };
+
+  const handleSave = async () => {
+    const allData = [...validRows, ...invalidRows];
+
+    try {
+      const response = await fetch("http://localhost:4000/api/upload", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ data: allData }),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        alert("✅ Data successfully cached to Redis!");
+      } else {
+        alert(`❌ Failed to save data: ${result.error}`);
+      }
+    } catch (error) {
+      console.error("Error saving to backend:", error);
+      alert("❌ Something went wrong while saving data.");
+    }
+  };
+
+  const handleFetchFromRedis = async () => {
+    try {
+      const response = await fetch("http://localhost:4000/api/fetch");
+      const result = await response.json();
+
+      if (response.ok) {
+        setSavedData(result.data);
+      } else {
+        alert(`❌ Failed to fetch: ${result.error}`);
+      }
+    } catch (err) {
+      console.error(err);
+      alert("❌ Error fetching from Redis.");
+    }
+  };
+
+  const handleSaveChanges = async () => {
+    try {
+      const response = await fetch("http://localhost:4000/api/saveChanges", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ data: savedData }),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        alert("✅ Changes saved to Redis!");
+      } else {
+        alert(`❌ Failed to save changes: ${result.error}`);
+      }
+    } catch (error) {
+      console.error("Error saving changes to backend:", error);
+      alert("❌ Something went wrong while saving changes.");
+    }
+  };
+
+  const toggleModal = (data) => {
+    setSelectedData(data);
+    setModalOpen(!modalOpen);
+  };
+
+  useEffect(() => {
+    // Fetch data from Redis when component mounts
+    handleFetchFromRedis();
+  }, []);
+
+  return (
+    <div className="p-8 bg-blue-50 min-h-screen">
+      <h2 className="text-2xl text-blue-700 font-semibold mb-4">🎓 Excel Student Validator</h2>
+      <input
+        type="file"
+        accept=".xlsx, .xls"
+        onChange={handleFileUpload}
+        className="mb-4 p-2 border-2 border-blue-300 rounded"
+      />
+
+      {loading && (
+        <div className="mt-4">
+          <div className="mb-2">Validating Rows...</div>
+          <div className="h-2 bg-blue-200 rounded">
+            <div
+              style={{ width: `${progress}%` }}
+              className="h-full bg-blue-600 transition-all rounded"
+            ></div>
+          </div>
+          <div className="mt-2">{Math.floor(rows.length * (progress / 100))} / {rows.length}</div>
+        </div>
+      )}
+
+      {!loading && (validRows.length > 0 || invalidRows.length > 0) && (
+        <div className="mt-8">
+          <h3 className="text-green-700 font-semibold">Data Verified</h3>
+
+          <details className="mt-4">
+            <summary className="cursor-pointer text-lg text-blue-600">
+              ✅ Valid Data ({validRows.length})
+            </summary>
+            <table className="w-full mt-2 border-collapse border border-gray-300">
+              <thead>
+                <tr>
+                  {Object.keys(validRows[0] || {}).map((key) => (
+                    <th key={key} className="border p-2 bg-blue-100">{key}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {validRows.map((row, index) => (
+                  <tr key={index} onClick={() => toggleModal(row)} className="cursor-pointer hover:bg-blue-200">
+                    {Object.entries(row).map(([key, value]) => (
+                      <td key={key} className="border p-2">
+                        {value}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </details>
+
+          <details className="mt-4">
+            <summary className="cursor-pointer text-lg text-red-600">
+              ❌ Invalid Data ({invalidRows.length})
+            </summary>
+            <table className="w-full mt-2 border-collapse border border-gray-300">
+              <thead>
+                <tr>
+                  {Object.keys(invalidRows[0] || {}).map((key) => (
+                    <th key={key} className="border p-2 bg-red-100">{key}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {invalidRows.map((row, index) => (
+                  <tr key={index} onClick={() => toggleModal(row)} className="cursor-pointer hover:bg-red-200">
+                    {Object.entries(row).map(([key, value]) => (
+                      <td key={key} className="border p-2">
+                        {key === "errors" ? (
+                          <span className="text-red-500">{value.join(", ")}</span>
+                        ) : (
+                          value
+                        )}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </details>
+
+          <button
+            onClick={handleSave}
+            className="mt-4 p-3 w-full bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700"
+          >
+            💾 Save Data
+          </button>
+        </div>
+      )}
+
+      <div className="mt-8">
+        <button
+          onClick={handleFetchFromRedis}
+          className="p-3 w-full bg-gray-600 text-white rounded-lg shadow-md hover:bg-gray-700"
+        >
+          🔄 Fetch Data from Redis
+        </button>
+
+        {savedData && (
+          <div className="mt-4">
+            {/* Small Card to Click */}
+            <div
+              onClick={() => toggleModal(savedData[0])}
+              className="cursor-pointer p-4 bg-blue-500 text-white rounded-lg shadow-lg w-64 mx-auto"
+            >
+              <h4 className="font-semibold">Cached Data from Redis</h4>
+              <p>{savedData.length} records available</p>
+            </div>
+
+            {/* Modal */}
+            {modalOpen && (
+              <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center">
+                <div className="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full">
+                  <h3 className="text-2xl font-semibold text-blue-700 mb-4">Student Details</h3>
+                  <div>
+                    {Object.entries(selectedData || {}).map(([key, value]) => (
+                      <div key={key} className="mb-2">
+                        <strong>{key}:</strong> {value}
+                      </div>
+                    ))}
+                    <button
+                      onClick={() => toggleModal(null)}
+                      className="mt-4 p-2 w-full bg-gray-600 text-white rounded-lg"
+                    >
+                      Close
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default Validator;

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import * as XLSX from "xlsx";
+import { useNavigate } from "react-router-dom";  // Import useNavigate for redirection
 
 const departments = ["BCA", "BSC", "MSC", "MCA", "EEE", "CSE"];
 
@@ -10,8 +11,8 @@ const Validator = () => {
   const [loading, setLoading] = useState(false);
   const [progress, setProgress] = useState(0);
   const [savedData, setSavedData] = useState(null);
-  const [modalOpen, setModalOpen] = useState(false);
-  const [selectedData, setSelectedData] = useState(null);
+
+  const navigate = useNavigate();  // Hook for redirection
 
   const validateRow = (row) => {
     const errors = [];
@@ -132,34 +133,6 @@ const Validator = () => {
     }
   };
 
-  const handleSaveChanges = async () => {
-    try {
-      const response = await fetch("http://localhost:4000/api/saveChanges", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ data: savedData }),
-      });
-
-      const result = await response.json();
-
-      if (response.ok) {
-        alert("✅ Changes saved to Redis!");
-      } else {
-        alert(`❌ Failed to save changes: ${result.error}`);
-      }
-    } catch (error) {
-      console.error("Error saving changes to backend:", error);
-      alert("❌ Something went wrong while saving changes.");
-    }
-  };
-
-  const toggleModal = (data) => {
-    setSelectedData(data);
-    setModalOpen(!modalOpen);
-  };
-
   useEffect(() => {
     // Fetch data from Redis when component mounts
     handleFetchFromRedis();
@@ -206,7 +179,7 @@ const Validator = () => {
               </thead>
               <tbody>
                 {validRows.map((row, index) => (
-                  <tr key={index} onClick={() => toggleModal(row)} className="cursor-pointer hover:bg-blue-200">
+                  <tr key={index} className="cursor-pointer hover:bg-blue-200">
                     {Object.entries(row).map(([key, value]) => (
                       <td key={key} className="border p-2">
                         {value}
@@ -232,7 +205,7 @@ const Validator = () => {
               </thead>
               <tbody>
                 {invalidRows.map((row, index) => (
-                  <tr key={index} onClick={() => toggleModal(row)} className="cursor-pointer hover:bg-red-200">
+                  <tr key={index} className="cursor-pointer hover:bg-red-200">
                     {Object.entries(row).map(([key, value]) => (
                       <td key={key} className="border p-2">
                         {key === "errors" ? (
@@ -254,52 +227,16 @@ const Validator = () => {
           >
             💾 Save Data
           </button>
+
+          {/* Edit Data Button */}
+          <button
+            onClick={() => navigate("/edit-data")}  // Redirect to /edit-data page using navigate
+            className="mt-4 p-3 w-full bg-green-600 text-white rounded-lg shadow-md hover:bg-green-700"
+          >
+            ✏️ Edit Data
+          </button>
         </div>
       )}
-
-      <div className="mt-8">
-        <button
-          onClick={handleFetchFromRedis}
-          className="p-3 w-full bg-gray-600 text-white rounded-lg shadow-md hover:bg-gray-700"
-        >
-          🔄 Fetch Data from Redis
-        </button>
-
-        {savedData && (
-          <div className="mt-4">
-            {/* Small Card to Click */}
-            <div
-              onClick={() => toggleModal(savedData[0])}
-              className="cursor-pointer p-4 bg-blue-500 text-white rounded-lg shadow-lg w-64 mx-auto"
-            >
-              <h4 className="font-semibold">Cached Data from Redis</h4>
-              <p>{savedData.length} records available</p>
-            </div>
-
-            {/* Modal */}
-            {modalOpen && (
-              <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center">
-                <div className="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full">
-                  <h3 className="text-2xl font-semibold text-blue-700 mb-4">Student Details</h3>
-                  <div>
-                    {Object.entries(selectedData || {}).map(([key, value]) => (
-                      <div key={key} className="mb-2">
-                        <strong>{key}:</strong> {value}
-                      </div>
-                    ))}
-                    <button
-                      onClick={() => toggleModal(null)}
-                      className="mt-4 p-2 w-full bg-gray-600 text-white rounded-lg"
-                    >
-                      Close
-                    </button>
-                  </div>
-                </div>
-              </div>
-            )}
-          </div>
-        )}
-      </div>
     </div>
   );
 };

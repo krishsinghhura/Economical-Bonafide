@@ -28,24 +28,7 @@ const getDataFromRedis = async (req, res) => {
   }
 };
 
-const saveChanges=async (req, res) => {
-  const { data } = req.body;
-
-  if (!data) {
-    return res.status(400).json({ error: "No data provided" });
-  }
-
-  // Save updated data to Redis (JSON.stringify for serialization)
-  client.set("cachedData", JSON.stringify(data), (err) => {
-    if (err) {
-      return res.status(500).json({ error: "Failed to save data" });
-    }
-    res.json({ message: "Changes saved to Redis!" });
-  });
-};
-
 module.exports = {
   uploadData,
   getDataFromRedis,
-  saveChanges
 };

@@ -1,0 +1,1731 @@
+{
+    "merkleRoot": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e",
+    "students": [
+        {
+            "NAME": "Student 1",
+            "EMAIL": "student1@example.com",
+            "AADHAR NUMBER": "123456789012",
+            "REGISTRATION NUMBER": "REG001",
+            "DEPARTMENT": "CSE",
+            "CGPA": 8.5,
+            "hashedAadhaar": "2a33349e7e606a8ad2e30e3c84521f9377450cf09083e162e0a9b1480ce0f972",
+            "merkleProof": [
+                {
+                    "position": "right",
+                    "data": "0e9feee8dd5d0d722ae507aecc216984c603cfb41bbc8f8b2313eef72409cd84"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 2",
+            "EMAIL": "student2@example.com",
+            "AADHAR NUMBER": "123456789013",
+            "REGISTRATION NUMBER": "REG002",
+            "DEPARTMENT": "CSE",
+            "CGPA": 7.8,
+            "hashedAadhaar": "0e9feee8dd5d0d722ae507aecc216984c603cfb41bbc8f8b2313eef72409cd84",
+            "merkleProof": [
+                {
+                    "position": "left",
+                    "data": "2a33349e7e606a8ad2e30e3c84521f9377450cf09083e162e0a9b1480ce0f972"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 3",
+            "EMAIL": "student3@example.com",
+            "AADHAR NUMBER": "123456789014",
+            "REGISTRATION NUMBER": "REG003",
+            "DEPARTMENT": "ECE",
+            "CGPA": 9,
+            "hashedAadhaar": "d13dda0de247e23cfbb377605fcb7ddc5876feb0126eb336de4d893b173cf96f",
+            "merkleProof": [
+                {
+                    "position": "right",
+                    "data": "7848e7a32014f3c78205a1f0d6342148b950b117ab419534ca8d3ba03352f9a5"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 4",
+            "EMAIL": "student4@example.com",
+            "AADHAR NUMBER": "123456789015",
+            "REGISTRATION NUMBER": "REG004",
+            "DEPARTMENT": "ECE",
+            "CGPA": 7.5,
+            "hashedAadhaar": "7848e7a32014f3c78205a1f0d6342148b950b117ab419534ca8d3ba03352f9a5",
+            "merkleProof": [
+                {
+                    "position": "left",
+                    "data": "d13dda0de247e23cfbb377605fcb7ddc5876feb0126eb336de4d893b173cf96f"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 5",
+            "EMAIL": "student5@example.com",
+            "AADHAR NUMBER": "123456789016",
+            "REGISTRATION NUMBER": "REG005",
+            "DEPARTMENT": "MCA",
+            "CGPA": 6.8,
+            "hashedAadhaar": "d67e811253d74e16460584e20f31e40ba152243c1f91b14f2efde60a557eef8d",
+            "merkleProof": [
+                {
+                    "position": "right",
+                    "data": "a099026be37f1913a6c84ea3ecbf1bc3e95d68c70a4cada95e26e3a6acf268dc"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 6",
+            "EMAIL": "student6@example.com",
+            "AADHAR NUMBER": "123456789017",
+            "REGISTRATION NUMBER": "REG006",
+            "DEPARTMENT": "MCA",
+            "CGPA": 8.1,
+            "hashedAadhaar": "a099026be37f1913a6c84ea3ecbf1bc3e95d68c70a4cada95e26e3a6acf268dc",
+            "merkleProof": [
+                {
+                    "position": "left",
+                    "data": "d67e811253d74e16460584e20f31e40ba152243c1f91b14f2efde60a557eef8d"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 7",
+            "EMAIL": "student7@example.com",
+            "AADHAR NUMBER": "123456789018",
+            "REGISTRATION NUMBER": "REG007",
+            "DEPARTMENT": "CSE",
+            "CGPA": 7.4,
+            "hashedAadhaar": "0722847621484e139b6f8692bb206c28a6858a6954c9289ce77f0a440aa076cc",
+            "merkleProof": [
+                {
+                    "position": "right",
+                    "data": "97c7126630eb7f1280928b7aece2319611b24ecb530501b100ce903ff65151de"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 8",
+            "EMAIL": "student8@example.com",
+            "AADHAR NUMBER": "123456789019",
+            "REGISTRATION NUMBER": "REG008",
+            "DEPARTMENT": "CSE",
+            "CGPA": 9.2,
+            "hashedAadhaar": "97c7126630eb7f1280928b7aece2319611b24ecb530501b100ce903ff65151de",
+            "merkleProof": [
+                {
+                    "position": "left",
+                    "data": "0722847621484e139b6f8692bb206c28a6858a6954c9289ce77f0a440aa076cc"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 9",
+            "EMAIL": "student9@example.com",
+            "AADHAR NUMBER": "123456789020",
+            "REGISTRATION NUMBER": "REG009",
+            "DEPARTMENT": "ECE",
+            "CGPA": 8,
+            "hashedAadhaar": "78a0fd421df008a753c8d7a9fdd8e18b6928d1ee512c2f146574d02485cf2de6",
+            "merkleProof": [
+                {
+                    "position": "right",
+                    "data": "259a9728b896a6836eacc1b709351299a553b2b97bbf7eafd0c1940a7264543e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 10",
+            "EMAIL": "student10@example.com",
+            "AADHAR NUMBER": "123456789021",
+            "REGISTRATION NUMBER": "REG010",
+            "DEPARTMENT": "ECE",
+            "CGPA": 7.9,
+            "hashedAadhaar": "259a9728b896a6836eacc1b709351299a553b2b97bbf7eafd0c1940a7264543e",
+            "merkleProof": [
+                {
+                    "position": "left",
+                    "data": "78a0fd421df008a753c8d7a9fdd8e18b6928d1ee512c2f146574d02485cf2de6"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 11",
+            "EMAIL": "student11@example.com",
+            "AADHAR NUMBER": "123456789022",
+            "REGISTRATION NUMBER": "REG011",
+            "DEPARTMENT": "MCA",
+            "CGPA": 6.7,
+            "hashedAadhaar": "01f10dd0e2a638044ebf39332ac2589916b6e9e79e51d466edb2173d5d8d8945",
+            "merkleProof": [
+                {
+                    "position": "right",
+                    "data": "6719297d40a2a7dcf4adaef5c7b35894113d511d3c8a359fa965c6f74a4e2c13"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 12",
+            "EMAIL": "student12@example.com",
+            "AADHAR NUMBER": "123456789023",
+            "REGISTRATION NUMBER": "REG012",
+            "DEPARTMENT": "MCA",
+            "CGPA": 7.8,
+            "hashedAadhaar": "6719297d40a2a7dcf4adaef5c7b35894113d511d3c8a359fa965c6f74a4e2c13",
+            "merkleProof": [
+                {
+                    "position": "left",
+                    "data": "01f10dd0e2a638044ebf39332ac2589916b6e9e79e51d466edb2173d5d8d8945"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 13",
+            "EMAIL": "student13@example.com",
+            "AADHAR NUMBER": "123456789024",
+            "REGISTRATION NUMBER": "REG013",
+            "DEPARTMENT": "CSE",
+            "CGPA": 8.6,
+            "hashedAadhaar": "98d0acd154fe5123f408c0dcbb8b7d492d55ae88badb923fdb73b7ba9244858c",
+            "merkleProof": [
+                {
+                    "position": "right",
+                    "data": "24829fca6d2aa3f841b0463695f0a574ea3b6f7b20c5307fd61dd887ac706e99"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 14",
+            "EMAIL": "student14@example.com",
+            "AADHAR NUMBER": "123456789025",
+            "REGISTRATION NUMBER": "REG014",
+            "DEPARTMENT": "CSE",
+            "CGPA": 7.3,
+            "hashedAadhaar": "24829fca6d2aa3f841b0463695f0a574ea3b6f7b20c5307fd61dd887ac706e99",
+            "merkleProof": [
+                {
+                    "position": "left",
+                    "data": "98d0acd154fe5123f408c0dcbb8b7d492d55ae88badb923fdb73b7ba9244858c"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 15",
+            "EMAIL": "student15@example.com",
+            "AADHAR NUMBER": "123456789026",
+            "REGISTRATION NUMBER": "REG015",
+            "DEPARTMENT": "ECE",
+            "CGPA": 8.9,
+            "hashedAadhaar": "58b9b15d97d906cd288adf4a5be1de0e91f1951cd22478314fdd73fa4f08f0e6",
+            "merkleProof": [
+                {
+                    "position": "right",
+                    "data": "f6e2881fb1307d965414370ff7256c6b8b70225ce8471c8dce2a6952bf85ab99"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 16",
+            "EMAIL": "student16@example.com",
+            "AADHAR NUMBER": "123456789027",
+            "REGISTRATION NUMBER": "REG016",
+            "DEPARTMENT": "ECE",
+            "CGPA": 7.7,
+            "hashedAadhaar": "f6e2881fb1307d965414370ff7256c6b8b70225ce8471c8dce2a6952bf85ab99",
+            "merkleProof": [
+                {
+                    "position": "left",
+                    "data": "58b9b15d97d906cd288adf4a5be1de0e91f1951cd22478314fdd73fa4f08f0e6"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 17",
+            "EMAIL": "student17@example.com",
+            "AADHAR NUMBER": "123456789028",
+            "REGISTRATION NUMBER": "REG017",
+            "DEPARTMENT": "MCA",
+            "CGPA": 6.9,
+            "hashedAadhaar": "82f7c84e17e8ab9f1548aca901e0046b05b1b1097c248594e61069167b57dde2",
+            "merkleProof": [
+                {
+                    "position": "right",
+                    "data": "4df71ebd833720022a883cbe4e93ccb5d82807a469252807fce0ce4fd951dbf4"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 18",
+            "EMAIL": "student18@example.com",
+            "AADHAR NUMBER": "123456789029",
+            "REGISTRATION NUMBER": "REG018",
+            "DEPARTMENT": "MCA",
+            "CGPA": 7.6,
+            "hashedAadhaar": "4df71ebd833720022a883cbe4e93ccb5d82807a469252807fce0ce4fd951dbf4",
+            "merkleProof": [
+                {
+                    "position": "left",
+                    "data": "82f7c84e17e8ab9f1548aca901e0046b05b1b1097c248594e61069167b57dde2"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 19",
+            "EMAIL": "student19@example.com",
+            "AADHAR NUMBER": "123456789030",
+            "REGISTRATION NUMBER": "REG019",
+            "DEPARTMENT": "CSE",
+            "CGPA": 8,
+            "hashedAadhaar": "bf6029ecb862a1c48b9f6287c702e19ed8ec61afced0eaae48e7bd3abb23edd7",
+            "merkleProof": [
+                {
+                    "position": "right",
+                    "data": "899581fc424f1118f3e6b345f5e39acb4f0bee5bd24872e0499a1a695d21b9c3"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 20",
+            "EMAIL": "student20@example.com",
+            "AADHAR NUMBER": "123456789031",
+            "REGISTRATION NUMBER": "REG020",
+            "DEPARTMENT": "CSE",
+            "CGPA": 9.3,
+            "hashedAadhaar": "899581fc424f1118f3e6b345f5e39acb4f0bee5bd24872e0499a1a695d21b9c3",
+            "merkleProof": [
+                {
+                    "position": "left",
+                    "data": "bf6029ecb862a1c48b9f6287c702e19ed8ec61afced0eaae48e7bd3abb23edd7"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 21",
+            "EMAIL": "student21@example.com",
+            "AADHAR NUMBER": "123456789032",
+            "REGISTRATION NUMBER": "REG021",
+            "DEPARTMENT": "ECE",
+            "CGPA": 8.1,
+            "hashedAadhaar": "ff021cdd7db87123f81629a6a0aee812226a3fda2a1070f8747c7225f76b2faa",
+            "merkleProof": [
+                {
+                    "position": "right",
+                    "data": "dc779f2e2f67d844e29069a2e372286ff5e64643097b52c0fbda7b37cc2745b0"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 22",
+            "EMAIL": "student22@example.com",
+            "AADHAR NUMBER": "123456789033",
+            "REGISTRATION NUMBER": "REG022",
+            "DEPARTMENT": "ECE",
+            "CGPA": 7.2,
+            "hashedAadhaar": "dc779f2e2f67d844e29069a2e372286ff5e64643097b52c0fbda7b37cc2745b0",
+            "merkleProof": [
+                {
+                    "position": "left",
+                    "data": "ff021cdd7db87123f81629a6a0aee812226a3fda2a1070f8747c7225f76b2faa"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 23",
+            "EMAIL": "student23@example.com",
+            "AADHAR NUMBER": "123456789034",
+            "REGISTRATION NUMBER": "REG023",
+            "DEPARTMENT": "MCA",
+            "CGPA": 8.3,
+            "hashedAadhaar": "366cc14b9cf197238a31667f26dc5427e1cd2d0dfc8c46e75890eccaa0a0e925",
+            "merkleProof": [
+                {
+                    "position": "right",
+                    "data": "585d35c5f6c6eeb17d236c497fecd6520ef7b149258cea0694ec343122de3740"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 24",
+            "EMAIL": "student24@example.com",
+            "AADHAR NUMBER": "123456789035",
+            "REGISTRATION NUMBER": "REG024",
+            "DEPARTMENT": "MCA",
+            "CGPA": 6.4,
+            "hashedAadhaar": "585d35c5f6c6eeb17d236c497fecd6520ef7b149258cea0694ec343122de3740",
+            "merkleProof": [
+                {
+                    "position": "left",
+                    "data": "366cc14b9cf197238a31667f26dc5427e1cd2d0dfc8c46e75890eccaa0a0e925"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 25",
+            "EMAIL": "student25@example.com",
+            "AADHAR NUMBER": "123456789036",
+            "REGISTRATION NUMBER": "REG025",
+            "DEPARTMENT": "CSE",
+            "CGPA": 9.1,
+            "hashedAadhaar": "6cf5d4cd4785a76b3ea225a5fd21f7c9ee25f2618a990ef4ef0fa0dacaa7494e",
+            "merkleProof": [
+                {
+                    "position": "right",
+                    "data": "fa7bd474d67515cd32b528f8649b45937e8f1aae8abf874851ad702011b5c7c7"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 26",
+            "EMAIL": "student26@example.com",
+            "AADHAR NUMBER": "123456789037",
+            "REGISTRATION NUMBER": "REG026",
+            "DEPARTMENT": "CSE",
+            "CGPA": 7.5,
+            "hashedAadhaar": "fa7bd474d67515cd32b528f8649b45937e8f1aae8abf874851ad702011b5c7c7",
+            "merkleProof": [
+                {
+                    "position": "left",
+                    "data": "6cf5d4cd4785a76b3ea225a5fd21f7c9ee25f2618a990ef4ef0fa0dacaa7494e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 27",
+            "EMAIL": "student27@example.com",
+            "AADHAR NUMBER": "123456789038",
+            "REGISTRATION NUMBER": "REG027",
+            "DEPARTMENT": "ECE",
+            "CGPA": 8.2,
+            "hashedAadhaar": "3030acbbd1ab9da562c9907496e966966fc1d1eff490d83d95356ad9482b67f4",
+            "merkleProof": [
+                {
+                    "position": "right",
+                    "data": "0caccd6368cdd41dfa8ffcc740452ddff9ec8a981d8bc58e636ccab76c76788a"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 28",
+            "EMAIL": "student28@example.com",
+            "AADHAR NUMBER": "123456789039",
+            "REGISTRATION NUMBER": "REG028",
+            "DEPARTMENT": "ECE",
+            "CGPA": 7.1,
+            "hashedAadhaar": "0caccd6368cdd41dfa8ffcc740452ddff9ec8a981d8bc58e636ccab76c76788a",
+            "merkleProof": [
+                {
+                    "position": "left",
+                    "data": "3030acbbd1ab9da562c9907496e966966fc1d1eff490d83d95356ad9482b67f4"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 29",
+            "EMAIL": "student29@example.com",
+            "AADHAR NUMBER": "123456789040",
+            "REGISTRATION NUMBER": "REG029",
+            "DEPARTMENT": "MCA",
+            "CGPA": 6.5,
+            "hashedAadhaar": "13c01b432890aa716fd9f6d6db6c745a68a3c48c55da6daafeffb81b2e0d7334",
+            "merkleProof": [
+                {
+                    "position": "right",
+                    "data": "2e9716a218100311f99c1e9487a8e68f90ad78b226ec47823291ac6244e7dc84"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 30",
+            "EMAIL": "student30@example.com",
+            "AADHAR NUMBER": "123456789041",
+            "REGISTRATION NUMBER": "REG030",
+            "DEPARTMENT": "MCA",
+            "CGPA": 7.9,
+            "hashedAadhaar": "2e9716a218100311f99c1e9487a8e68f90ad78b226ec47823291ac6244e7dc84",
+            "merkleProof": [
+                {
+                    "position": "left",
+                    "data": "13c01b432890aa716fd9f6d6db6c745a68a3c48c55da6daafeffb81b2e0d7334"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 31",
+            "EMAIL": "student31@example.com",
+            "AADHAR NUMBER": "123456789042",
+            "REGISTRATION NUMBER": "REG031",
+            "DEPARTMENT": "CSE",
+            "CGPA": 8.7,
+            "hashedAadhaar": "d520237b341065ee86fc579fc18bdea0920b3050dd0f3aaf8e4d4e4a5357a9a3",
+            "merkleProof": [
+                {
+                    "position": "right",
+                    "data": "47922f6bc97b93139766c88c85e928990b0de99c0eb02e4f8942f10f06a97d27"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 32",
+            "EMAIL": "student32@example.com",
+            "AADHAR NUMBER": "123456789043",
+            "REGISTRATION NUMBER": "REG032",
+            "DEPARTMENT": "CSE",
+            "CGPA": 7.4,
+            "hashedAadhaar": "47922f6bc97b93139766c88c85e928990b0de99c0eb02e4f8942f10f06a97d27",
+            "merkleProof": [
+                {
+                    "position": "left",
+                    "data": "d520237b341065ee86fc579fc18bdea0920b3050dd0f3aaf8e4d4e4a5357a9a3"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 33",
+            "EMAIL": "student33@example.com",
+            "AADHAR NUMBER": "123456789044",
+            "REGISTRATION NUMBER": "REG033",
+            "DEPARTMENT": "ECE",
+            "CGPA": 8.5,
+            "hashedAadhaar": "ebea9616c9de7b7c0166a0fd87e99c3b08212a9f9bb6a46e405730ac9bdd31b4",
+            "merkleProof": [
+                {
+                    "position": "right",
+                    "data": "5bb474db2799941f5215a579804fc00e2c2ceeb8dcc73b62a61c50115f45c852"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 34",
+            "EMAIL": "student34@example.com",
+            "AADHAR NUMBER": "123456789045",
+            "REGISTRATION NUMBER": "REG034",
+            "DEPARTMENT": "ECE",
+            "CGPA": 8,
+            "hashedAadhaar": "5bb474db2799941f5215a579804fc00e2c2ceeb8dcc73b62a61c50115f45c852",
+            "merkleProof": [
+                {
+                    "position": "left",
+                    "data": "ebea9616c9de7b7c0166a0fd87e99c3b08212a9f9bb6a46e405730ac9bdd31b4"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 35",
+            "EMAIL": "student35@example.com",
+            "AADHAR NUMBER": "123456789046",
+            "REGISTRATION NUMBER": "REG035",
+            "DEPARTMENT": "MCA",
+            "CGPA": 9,
+            "hashedAadhaar": "3e31ef6c573dcd67db6ac0e29a3d3469e6036e37c7aeb6bf5d2d86e04048b077",
+            "merkleProof": [
+                {
+                    "position": "right",
+                    "data": "502160dae11d4722861c0c27aa247e314fd0f0380c85581b7994b1abd51745c3"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 36",
+            "EMAIL": "student36@example.com",
+            "AADHAR NUMBER": "123456789047",
+            "REGISTRATION NUMBER": "REG036",
+            "DEPARTMENT": "MCA",
+            "CGPA": 6.3,
+            "hashedAadhaar": "502160dae11d4722861c0c27aa247e314fd0f0380c85581b7994b1abd51745c3",
+            "merkleProof": [
+                {
+                    "position": "left",
+                    "data": "3e31ef6c573dcd67db6ac0e29a3d3469e6036e37c7aeb6bf5d2d86e04048b077"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 37",
+            "EMAIL": "student37@example.com",
+            "AADHAR NUMBER": "123456789048",
+            "REGISTRATION NUMBER": "REG037",
+            "DEPARTMENT": "CSE",
+            "CGPA": 9.4,
+            "hashedAadhaar": "e854bb789fafc672379365c42b79bff0ee3313fee89395c989954c61e71475a4",
+            "merkleProof": [
+                {
+                    "position": "right",
+                    "data": "314e75155420a84ac55278b746b81348056885106d81353b4702c974241b8bb8"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 38",
+            "EMAIL": "student38@example.com",
+            "AADHAR NUMBER": "123456789049",
+            "REGISTRATION NUMBER": "REG038",
+            "DEPARTMENT": "CSE",
+            "CGPA": 8.2,
+            "hashedAadhaar": "314e75155420a84ac55278b746b81348056885106d81353b4702c974241b8bb8",
+            "merkleProof": [
+                {
+                    "position": "left",
+                    "data": "e854bb789fafc672379365c42b79bff0ee3313fee89395c989954c61e71475a4"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 39",
+            "EMAIL": "student39@example.com",
+            "AADHAR NUMBER": "123456789050",
+            "REGISTRATION NUMBER": "REG039",
+            "DEPARTMENT": "ECE",
+            "CGPA": 7.3,
+            "hashedAadhaar": "43bd36d164c48725d354dbb3b91689536144c438c49daf890964f1801573a0ce",
+            "merkleProof": [
+                {
+                    "position": "right",
+                    "data": "5eadc1b451d9c995128de7676bd0962c7029d4e91779cf5f56bf631d030bf307"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 40",
+            "EMAIL": "student40@example.com",
+            "AADHAR NUMBER": "123456789051",
+            "REGISTRATION NUMBER": "REG040",
+            "DEPARTMENT": "ECE",
+            "CGPA": 8.4,
+            "hashedAadhaar": "5eadc1b451d9c995128de7676bd0962c7029d4e91779cf5f56bf631d030bf307",
+            "merkleProof": [
+                {
+                    "position": "left",
+                    "data": "43bd36d164c48725d354dbb3b91689536144c438c49daf890964f1801573a0ce"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 41",
+            "EMAIL": "student41@example.com",
+            "AADHAR NUMBER": "123456789052",
+            "REGISTRATION NUMBER": "REG041",
+            "DEPARTMENT": "MCA",
+            "CGPA": 7,
+            "hashedAadhaar": "e8d38c974e367fc948d5218dfc43a1d7dbb78d5cf5c2e135654330e7f7aed1bb",
+            "merkleProof": [
+                {
+                    "position": "right",
+                    "data": "99908a3519196d45ff2a5ca7c51195479b5abed4273de5d1874c65076e5b17d5"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 42",
+            "EMAIL": "student42@example.com",
+            "AADHAR NUMBER": "123456789053",
+            "REGISTRATION NUMBER": "REG042",
+            "DEPARTMENT": "MCA",
+            "CGPA": 6.2,
+            "hashedAadhaar": "99908a3519196d45ff2a5ca7c51195479b5abed4273de5d1874c65076e5b17d5",
+            "merkleProof": [
+                {
+                    "position": "left",
+                    "data": "e8d38c974e367fc948d5218dfc43a1d7dbb78d5cf5c2e135654330e7f7aed1bb"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 43",
+            "EMAIL": "student43@example.com",
+            "AADHAR NUMBER": "123456789054",
+            "REGISTRATION NUMBER": "REG043",
+            "DEPARTMENT": "CSE",
+            "CGPA": 9.2,
+            "hashedAadhaar": "d98a774108415f532c6c0f5a272a1f26b8a91977de0acd2d76787c7a74de53fb",
+            "merkleProof": [
+                {
+                    "position": "right",
+                    "data": "28589988560188b45a063add6aa08e983e099b86a7838cf3c5ecad00465321de"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 44",
+            "EMAIL": "student44@example.com",
+            "AADHAR NUMBER": "123456789055",
+            "REGISTRATION NUMBER": "REG044",
+            "DEPARTMENT": "CSE",
+            "CGPA": 7.6,
+            "hashedAadhaar": "28589988560188b45a063add6aa08e983e099b86a7838cf3c5ecad00465321de",
+            "merkleProof": [
+                {
+                    "position": "left",
+                    "data": "d98a774108415f532c6c0f5a272a1f26b8a91977de0acd2d76787c7a74de53fb"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 45",
+            "EMAIL": "student45@example.com",
+            "AADHAR NUMBER": "123456789056",
+            "REGISTRATION NUMBER": "REG045",
+            "DEPARTMENT": "ECE",
+            "CGPA": 8.8,
+            "hashedAadhaar": "0db5e16e90460c3c3838e2ca4928fc3d07cf6d2caf66182a909343aead442472",
+            "merkleProof": [
+                {
+                    "position": "right",
+                    "data": "35e8aa9c6d6a605d19fa06d6c094c68793073bcf35da51e786657559eb796591"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 46",
+            "EMAIL": "student46@example.com",
+            "AADHAR NUMBER": "123456789057",
+            "REGISTRATION NUMBER": "REG046",
+            "DEPARTMENT": "ECE",
+            "CGPA": 7.2,
+            "hashedAadhaar": "35e8aa9c6d6a605d19fa06d6c094c68793073bcf35da51e786657559eb796591",
+            "merkleProof": [
+                {
+                    "position": "left",
+                    "data": "0db5e16e90460c3c3838e2ca4928fc3d07cf6d2caf66182a909343aead442472"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 47",
+            "EMAIL": "student47@example.com",
+            "AADHAR NUMBER": "123456789058",
+            "REGISTRATION NUMBER": "REG047",
+            "DEPARTMENT": "MCA",
+            "CGPA": 8.4,
+            "hashedAadhaar": "c826a8e946e112346182cc53f6d34c41c741f8bb74ed88b13809d513243f64f1",
+            "merkleProof": [
+                {
+                    "position": "right",
+                    "data": "942d919ac262632b75756af592cce01cd0cc7864a2d50d04bdddbdf8596be485"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 48",
+            "EMAIL": "student48@example.com",
+            "AADHAR NUMBER": "123456789059",
+            "REGISTRATION NUMBER": "REG048",
+            "DEPARTMENT": "MCA",
+            "CGPA": 6.7,
+            "hashedAadhaar": "942d919ac262632b75756af592cce01cd0cc7864a2d50d04bdddbdf8596be485",
+            "merkleProof": [
+                {
+                    "position": "left",
+                    "data": "c826a8e946e112346182cc53f6d34c41c741f8bb74ed88b13809d513243f64f1"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "right",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 49",
+            "EMAIL": "student49@example.com",
+            "AADHAR NUMBER": "123456789060",
+            "REGISTRATION NUMBER": "REG049",
+            "DEPARTMENT": "CSE",
+            "CGPA": 8,
+            "hashedAadhaar": "1e7b92089f97db67b292c9134ddd7335ab807c56c272b6f95c0548b4c0c9ca68",
+            "merkleProof": [
+                {
+                    "position": "right",
+                    "data": "05c2805b9f048d61a3ff10ae27e91ad372bd06963aeb213e133de7d683d234d5"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        },
+        {
+            "NAME": "Student 50",
+            "EMAIL": "student50@example.com",
+            "AADHAR NUMBER": "123456789061",
+            "REGISTRATION NUMBER": "REG050",
+            "DEPARTMENT": "CSE",
+            "CGPA": 7.8,
+            "hashedAadhaar": "05c2805b9f048d61a3ff10ae27e91ad372bd06963aeb213e133de7d683d234d5",
+            "merkleProof": [
+                {
+                    "position": "left",
+                    "data": "1e7b92089f97db67b292c9134ddd7335ab807c56c272b6f95c0548b4c0c9ca68"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                },
+                {
+                    "position": "left",
+                    "data": "4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e"
+                }
+            ]
+        }
+    ]
+}

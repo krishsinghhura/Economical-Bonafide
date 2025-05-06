@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import * as XLSX from "xlsx";
-import { useNavigate } from "react-router-dom";  // Import useNavigate for redirection
+import { useNavigate } from "react-router-dom";
 
 const departments = ["BCA", "BSC", "MSC", "MCA", "EEE", "CSE"];
 
@@ -12,7 +12,7 @@ const Validator = () => {
   const [progress, setProgress] = useState(0);
   const [savedData, setSavedData] = useState(null);
 
-  const navigate = useNavigate();  // Hook for redirection
+  const navigate = useNavigate();
 
   const validateRow = (row) => {
     const errors = [];
@@ -79,7 +79,7 @@ const Validator = () => {
           setInvalidRows(tempInvalid);
           setLoading(false);
         }
-      }, 2000 / json.length); // Total 2 seconds
+      }, 2000 / json.length);
     };
 
     reader.readAsBinaryString(file);
@@ -122,10 +122,8 @@ const Validator = () => {
       const response = await fetch("http://localhost:4000/api/fetch");
       const result = await response.json();
 
-      if (response.ok) {
+      if (response.ok && result.data?.length > 0) {
         setSavedData(result.data);
-      } else {
-        alert(`❌ Failed to fetch: ${result.error}`);
       }
     } catch (err) {
       console.error(err);
@@ -134,19 +132,43 @@ const Validator = () => {
   };
 
   useEffect(() => {
-    // Fetch data from Redis when component mounts
     handleFetchFromRedis();
   }, []);
+
+  const PostingToBlockchain=()=>{
+    navigate("/confirmation");
+  }
 
   return (
     <div className="p-8 bg-blue-50 min-h-screen">
       <h2 className="text-2xl text-blue-700 font-semibold mb-4">🎓 Excel Student Validator</h2>
+      
+
+      {/* Show card if Redis data exists */}
+      {savedData && (
+        <div
+          onClick={() => navigate("/edit-data")}
+          className="cursor-pointer mb-6 p-4 rounded-lg shadow-lg bg-white border-l-4 border-green-500 hover:bg-green-50 transition"
+        >
+          <h3 className="text-xl font-semibold text-green-600">📦 Cached Data Found</h3>
+          <p className="text-gray-600 mt-1">Click here to edit the cached data from Redis</p>
+          
+        </div>
+        
+      )}
+
       <input
         type="file"
         accept=".xlsx, .xls"
         onChange={handleFileUpload}
         className="mb-4 p-2 border-2 border-blue-300 rounded"
       />
+      <button
+            onClick={PostingToBlockchain}
+            className="mt-4 p-3 w-full bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700"
+          >
+            Post to Blockchain
+          </button>
 
       {loading && (
         <div className="mt-4">
@@ -157,7 +179,9 @@ const Validator = () => {
               className="h-full bg-blue-600 transition-all rounded"
             ></div>
           </div>
-          <div className="mt-2">{Math.floor(rows.length * (progress / 100))} / {rows.length}</div>
+          <div className="mt-2">
+            {Math.floor(rows.length * (progress / 100))} / {rows.length}
+          </div>
         </div>
       )}
 
@@ -173,7 +197,9 @@ const Validator = () => {
               <thead>
                 <tr>
                   {Object.keys(validRows[0] || {}).map((key) => (
-                    <th key={key} className="border p-2 bg-blue-100">{key}</th>
+                    <th key={key} className="border p-2 bg-blue-100">
+                      {key}
+                    </th>
                   ))}
                 </tr>
               </thead>
@@ -199,7 +225,9 @@ const Validator = () => {
               <thead>
                 <tr>
                   {Object.keys(invalidRows[0] || {}).map((key) => (
-                    <th key={key} className="border p-2 bg-red-100">{key}</th>
+                    <th key={key} className="border p-2 bg-red-100">
+                      {key}
+                    </th>
                   ))}
                 </tr>
               </thead>
@@ -228,9 +256,8 @@ const Validator = () => {
             💾 Save Data
           </button>
 
-          {/* Edit Data Button */}
           <button
-            onClick={() => navigate("/edit-data")}  // Redirect to /edit-data page using navigate
+            onClick={() => navigate("/edit-data")}
             className="mt-4 p-3 w-full bg-green-600 text-white rounded-lg shadow-md hover:bg-green-700"
           >
             ✏️ Edit Data

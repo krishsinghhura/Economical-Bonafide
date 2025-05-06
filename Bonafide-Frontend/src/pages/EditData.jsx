@@ -1,10 +1,12 @@
 // EditData.js
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const EditData = () => {
   const [students, setStudents] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [editingData, setEditingData] = useState(null);
+  const navigate = useNavigate();
 
   // Fetch data from Redis on component mount
   useEffect(() => {
@@ -47,6 +49,7 @@ const EditData = () => {
 
       if (response.ok) {
         alert("✅ Changes saved to Redis!");
+        navigate("/validate")
       } else {
         alert(`❌ Failed to save changes: ${result.error}`);
       }

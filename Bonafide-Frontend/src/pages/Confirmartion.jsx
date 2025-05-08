@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import  {uploadMerkleRoot}  from "../utils/uploadMerkleRoot"
 
 const ConfirmBlockchainPost = () => {
   const [data, setData] = useState([]);
@@ -14,11 +15,11 @@ const ConfirmBlockchainPost = () => {
       if (response.ok && result.data) {
         setData(result.data);
       } else {
-        alert("❌ Failed to fetch data from Redis.");
+        alert(" Failed to fetch data from Redis.");
       }
     } catch (error) {
       console.error("Error fetching Redis data:", error);
-      alert("❌ Error while fetching Redis data.");
+      alert(" Error while fetching Redis data.");
     } finally {
       setLoading(false);
     }
@@ -33,18 +34,34 @@ const ConfirmBlockchainPost = () => {
         },
         body: JSON.stringify({ data }),
       });
-
+  
       const result = await response.json();
-
+      
+  
       if (response.ok) {
-        alert("✅ Data successfully posted to blockchain!");
-        navigate("/"); // Go back to main page
+        const merkleRoot = result.merkleRoot;
+  
+        if (!merkleRoot) {
+          alert("❌ No Merkle root returned from backend.");
+          return;
+        }
+  
+        const blockchainSuccess = await uploadMerkleRoot(merkleRoot);
+        console.log(merkleRoot);
+        
+  
+        if (blockchainSuccess) {
+          alert(" Data confirmed and Merkle root stored on blockchain!");
+          navigate("/validate");
+        } else {
+          alert(" Merkle root failed to upload to blockchain.");
+        }
       } else {
-        alert(`❌ Failed to post: ${result.error}`);
+        alert(` Failed to post: ${result.error}`);
       }
     } catch (err) {
       console.error(err);
-      alert("❌ Error posting to blockchain.");
+      alert(" Error posting to blockchain.");
     }
   };
 

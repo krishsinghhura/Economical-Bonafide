@@ -1,11 +1,8 @@
 const SHA256 = require('crypto-js/sha256');
 const { MerkleTree } = require('merkletreejs');
-const {findStudentByHashedAadhaar}=require("../services/fetchMerkledata");
+const { findStudentByHashedAadhaar } = require("../services/fetchMerkledata");
 
-// Reuse the same hash function
 const sha256 = (data) => Buffer.from(SHA256(data).toString(), 'hex');
-
-const STORED_MERKLE_ROOT = '4ea5c508a6566e76240543f8feb06fd457777be39549c4016436afda65d2330e';
 
 const verifyAadhaar = async (req, res) => {
   const { aadhaar } = req.body;
@@ -32,23 +29,32 @@ const verifyAadhaar = async (req, res) => {
     return res.status(500).json({ error: err.message });
   }
 
-  let isVerified;
+  let proof;
   try {
-    const proof = student.merkleProof.map(p => ({
+    proof = student.merkleProof.map(p => ({
       position: p.position,
       data: Buffer.from(p.data, 'hex'),
     }));
-
-    const rootBuffer = Buffer.from(STORED_MERKLE_ROOT, 'hex');
-    isVerified = MerkleTree.verify(proof, Buffer.from(aadhaarHash, 'hex'), rootBuffer, sha256);
   } catch (err) {
-    console.error("Verification error:", err.message);
-    return res.status(500).json({ error: 'Verification failed' });
+    console.error("Error parsing Merkle proof:", err.message);
+    return res.status(500).json({ error: 'Merkle proof error' });
   }
 
+  
+  let merkleRoot;
+  try {
+    const leaves = student.merkleProof.map(p => sha256(p.data.toString()));
+    const tree = new MerkleTree(leaves, sha256);
+    merkleRoot = tree.getRoot().toString('hex'); 
+  } catch (err) {
+    console.error("Error generating Merkle tree:", err.message);
+    return res.status(500).json({ error: 'Merkle root generation failed' });
+  }
+  
   return res.json({
-    status: isVerified ? 'Verified' : 'Not Verified',
-    student: isVerified ? student : null
+    status: 'Success',
+    message: 'Student data and Merkle proofs processed successfully',
+    merkleRoot: merkleRoot 
   });
 };
 

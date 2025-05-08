@@ -1,30 +1,69 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { checkMerkleRoot } from '../utils/checkMerkleRoot';  // Import the checkMerkleRoot function
 
 const VerifyAadhaar = () => {
   const [aadhaar, setAadhaar] = useState('');
   const [result, setResult] = useState(null);
   const [error, setError] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleVerify = async (e) => {
     e.preventDefault();
     setError('');
     setResult(null);
+    setIsLoading(true);
 
     if (!aadhaar) {
       setError('Please enter your Aadhaar number.');
+      setIsLoading(false);
       return;
     }
 
     try {
+      
       const response = await axios.post('http://localhost:4000/block/verify', { aadhaar });
-      setResult(response.data);
+      console.log(response);
+      
+      const { student, merkleRoot } = response.data;
+
+      console.log(response.data.merkleRoot);
+      
+
+      if (!student) {
+        setError('Student not found or verification failed.');
+        setIsLoading(false);
+        return;
+      }
+
+      
+      const isMerkleRootValid = await checkMerkleRoot(merkleRoot);
+
+      
+      if (isMerkleRootValid) {
+        setResult({
+          status: 'Verified',
+          student: student,
+          storedMerkleRoot: merkleRoot,
+          blockchainValidity: 'Valid Merkle Root',
+        });
+      } else {
+        setResult({
+          status: 'Not Verified',
+          student: student,
+          storedMerkleRoot: merkleRoot,
+          blockchainValidity: 'Invalid Merkle Root',
+        });
+      }
     } catch (err) {
+      console.error(err);
       if (err.response) {
         setError(err.response.data.message || err.response.data.error);
       } else {
         setError('Server error. Please try again.');
       }
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -43,8 +82,9 @@ const VerifyAadhaar = () => {
         <button
           type="submit"
           className="bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition"
+          disabled={isLoading}
         >
-          Verify
+          {isLoading ? 'Verifying...' : 'Verify'}
         </button>
       </form>
 
@@ -62,6 +102,12 @@ const VerifyAadhaar = () => {
               {JSON.stringify(result.student, null, 2)}
             </pre>
           )}
+          <p className="mt-2">
+            <strong>Stored Merkle Root:</strong> {result.storedMerkleRoot}
+          </p>
+          <p className="mt-2">
+            <strong>Blockchain Merkle Root Validity:</strong> {result.blockchainValidity}
+          </p>
         </div>
       )}
     </div>

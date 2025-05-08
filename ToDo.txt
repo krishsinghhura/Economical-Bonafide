@@ -1,5 +1,1 @@
-we are not handling the merkle root in confirmController, we need to push to blockchain afterwards
 
-write a function which will take out data from the DB in for verifyConroller
-
-Also retrive thee merkle root from blockchain and match it in verifyConroller
